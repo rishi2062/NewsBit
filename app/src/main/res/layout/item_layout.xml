@@ -3,7 +3,7 @@
     android:id="@+id/card_view"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    card_view:cardCornerRadius="4dp"
+    card_view:cardCornerRadius="30dp"
     card_view:cardElevation="20dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@string/title" />
+            android:text="@string/title"/>
 
         <TextView
             android:id="@+id/textDescription"

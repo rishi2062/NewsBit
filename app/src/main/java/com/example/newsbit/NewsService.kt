@@ -11,7 +11,7 @@ const val BASE_URL = "https://newsapi.org/v2/"
 const val API_KEY = "c9ac818f4bb24de286c62c9339157d78"
 interface NewsService {
     @GET("top-headlines?apiKey=$API_KEY")
-    fun getNews(@Query("country") country : String,@Query("page") page:Int) : Call<News>
+    fun getNews(@Query("country") country : String,@Query("category") category : String) : Call<News>
 }
 
 object NewsObject{
