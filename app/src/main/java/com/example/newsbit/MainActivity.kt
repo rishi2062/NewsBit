@@ -3,6 +3,8 @@ package com.example.newsbit
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.RoundedCorner
+import android.widget.FrameLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsbit.NewsObject.newsInstance
@@ -39,4 +41,5 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
 }
