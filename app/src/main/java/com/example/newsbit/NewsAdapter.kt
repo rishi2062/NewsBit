@@ -19,8 +19,8 @@ class NewsAdapter(private val context: Context, private val articles: List<Artic
     RecyclerView.Adapter<NewsAdapter.newsViewHolder>() {
     class newsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var newsImage = itemView.findViewById<ImageView>(R.id.image)!!
+        var newsAuthor = itemView.findViewById<TextView>(R.id.textAuthor)!!
         var newsTitle = itemView.findViewById<TextView>(R.id.textTitle)!!
-        var newsDescription = itemView.findViewById<TextView>(R.id.textDescription)!!
         var button = itemView.findViewById<Button>(R.id.button_share)
     }
 
@@ -31,8 +31,8 @@ class NewsAdapter(private val context: Context, private val articles: List<Artic
 
     override fun onBindViewHolder(holder: newsViewHolder, position: Int) {
         val item = articles[position]
+        holder.newsAuthor.text = item.author
         holder.newsTitle.text = item.title
-        holder.newsDescription.text = item.description
         Glide.with(context).load(item.urlToImage).into(holder.newsImage)
         holder.itemView.setOnClickListener{
             val queryUrl : Uri = Uri.parse("${item.url}")
