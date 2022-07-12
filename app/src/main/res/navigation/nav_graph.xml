@@ -9,5 +9,30 @@
         android:id="@+id/startFragment"
         android:name="com.example.newsbit.StartFragment"
         android:label="fragment_start"
-        tools:layout="@layout/fragment_start" />
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_businessFragment"
+            app:destination="@id/businessFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_sportsFragment"
+            app:destination="@id/sportsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.example.newsbit.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" />
+    <fragment
+        android:id="@+id/businessFragment"
+        android:name="com.example.newsbit.BusinessFragment"
+        android:label="fragment_business"
+        tools:layout="@layout/fragment_business" />
+    <fragment
+        android:id="@+id/sportsFragment"
+        android:name="com.example.newsbit.SportsFragment"
+        android:label="fragment_sports"
+        tools:layout="@layout/fragment_sports" />
 </navigation>
