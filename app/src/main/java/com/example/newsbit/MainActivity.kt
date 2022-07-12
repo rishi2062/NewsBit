@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getnews() {
-        val news = NewsObject.newsInstance.getNews("in","sports")
+        val news = NewsObject.newsInstance.getNews("in","")
         news.enqueue(object : Callback<News> {
             override fun onResponse(call: Call<News>, response: Response<News>) {
                 val news = response.body()
@@ -45,9 +45,6 @@ class MainActivity : AppCompatActivity() {
                     val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
                     recyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
                     recyclerView.adapter = NewsAdapter(this@MainActivity, news.articles)
-//                    if(totalResults > size){
-//                        getnews()
-//                    }
 
                 }
 

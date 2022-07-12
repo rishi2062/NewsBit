@@ -8,6 +8,7 @@ import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
@@ -20,6 +21,7 @@ class NewsAdapter(private val context: Context, private val articles: List<Artic
         var newsImage = itemView.findViewById<ImageView>(R.id.image)!!
         var newsTitle = itemView.findViewById<TextView>(R.id.textTitle)!!
         var newsDescription = itemView.findViewById<TextView>(R.id.textDescription)!!
+        var button = itemView.findViewById<Button>(R.id.button_share)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): newsViewHolder {
@@ -35,6 +37,12 @@ class NewsAdapter(private val context: Context, private val articles: List<Artic
         holder.itemView.setOnClickListener{
             val queryUrl : Uri = Uri.parse("${item.url}")
             val intent = Intent(ACTION_VIEW,queryUrl)
+            context.startActivity(intent)
+        }
+        holder.button.setOnClickListener{
+            val intent = Intent(ACTION_SEND)
+            intent.type = "text/plain"
+            intent.putExtra(Intent.EXTRA_TEXT,"${item.url}")
             context.startActivity(intent)
         }
     }
