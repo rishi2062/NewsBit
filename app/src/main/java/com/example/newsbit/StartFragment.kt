@@ -35,19 +35,19 @@ class StartFragment : Fragment() {
             findNavController().navigate(R.id.action_startFragment_to_sportsFragment)
         }
         binding.technology.setOnClickListener{
-            findNavController().navigate(R.id.action_startFragment_to_newsFragment)
+            findNavController().navigate(R.id.action_startFragment_to_technologyFragment)
         }
         binding.entertainment.setOnClickListener{
-            findNavController().navigate(R.id.action_startFragment_to_newsFragment)
+            findNavController().navigate(R.id.action_startFragment_to_entertainmentFragment)
         }
         binding.science.setOnClickListener{
-            findNavController().navigate(R.id.action_startFragment_to_newsFragment)
+            findNavController().navigate(R.id.action_startFragment_to_scienceFragment)
         }
         binding.health.setOnClickListener{
-            findNavController().navigate(R.id.action_startFragment_to_newsFragment)
+            findNavController().navigate(R.id.action_startFragment_to_healthFragment)
         }
         binding.general.setOnClickListener{
-            findNavController().navigate(R.id.action_startFragment_to_newsFragment)
+            findNavController().navigate(R.id.action_startFragment_to_generalFragment)
         }
     }
 }

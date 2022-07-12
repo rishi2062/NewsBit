@@ -19,6 +19,21 @@
         <action
             android:id="@+id/action_startFragment_to_sportsFragment"
             app:destination="@id/sportsFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_healthFragment"
+            app:destination="@id/healthFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_technologyFragment"
+            app:destination="@id/technologyFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_entertainmentFragment"
+            app:destination="@id/entertainmentFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_scienceFragment"
+            app:destination="@id/scienceFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_generalFragment"
+            app:destination="@id/generalFragment" />
     </fragment>
     <fragment
         android:id="@+id/newsFragment"
@@ -35,4 +50,29 @@
         android:name="com.example.newsbit.SportsFragment"
         android:label="fragment_sports"
         tools:layout="@layout/fragment_sports" />
+    <fragment
+        android:id="@+id/healthFragment"
+        android:name="com.example.newsbit.HealthFragment"
+        android:label="fragment_health"
+        tools:layout="@layout/fragment_health" />
+    <fragment
+        android:id="@+id/technologyFragment"
+        android:name="com.example.newsbit.TechnologyFragment"
+        android:label="fragment_technology"
+        tools:layout="@layout/fragment_technology" />
+    <fragment
+        android:id="@+id/entertainmentFragment"
+        android:name="com.example.newsbit.EntertainmentFragment"
+        android:label="fragment_entertainment"
+        tools:layout="@layout/fragment_entertainment" />
+    <fragment
+        android:id="@+id/scienceFragment"
+        android:name="com.example.newsbit.ScienceFragment"
+        android:label="fragment_science"
+        tools:layout="@layout/fragment_science" />
+    <fragment
+        android:id="@+id/generalFragment"
+        android:name="com.example.newsbit.GeneralFragment"
+        android:label="fragment_general"
+        tools:layout="@layout/fragment_general" />
 </navigation>

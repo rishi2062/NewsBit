@@ -5,127 +5,294 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         tools:context=".StartFragment">
 
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
-            android:fontFamily="monospace"
-            android:text="@string/choose_category"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@id/topHeadline"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="28dp" />
+                <TextView
+                    android:id="@+id/text"
+                    style="@style/TextAppearance.Material3.HeadlineLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/choose_category"
+                    android:textColor="#498553"
+                    android:textSize="25sp"
+                    android:textStyle="bold|italic" />
 
-        <Button
-            android:id="@+id/topHeadline"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="116dp"
-            android:background="@drawable/round_btn"
-            android:text="@string/top_headlines"
-            android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="@id/guideline2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/text" />
-
-        <Button
-            android:id="@+id/business"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="116dp"
-            android:background="@drawable/round_btn"
-            android:textColor="@color/white"
-            android:text="@string/business"
-            app:layout_constraintStart_toStartOf="@id/guideline2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/text" />
-
-        <Button
-            android:id="@+id/entertainment"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="368dp"
-            android:background="@drawable/round_btn"
-            android:text="@string/entertainment"
-            android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="@id/guideline2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/text" />
-
-        <Button
-            android:id="@+id/general"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="492dp"
-            android:background="@drawable/round_btn"
-            android:textColor="@color/white"
-            android:text="@string/general"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.509"
-            app:layout_constraintStart_toStartOf="@id/guideline2"
-            app:layout_constraintTop_toTopOf="@id/text" />
-
-        <Button
-            android:id="@+id/health"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="492dp"
-            android:background="@drawable/round_btn"
-            android:textColor="@color/white"
-            android:text="@string/health"
-            app:layout_constraintEnd_toEndOf="@id/guideline2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/text" />
-
-        <Button
-            android:id="@+id/science"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="368dp"
-            android:background="@drawable/round_btn"
-            android:textColor="@color/white"
-            android:text="@string/science"
-            app:layout_constraintStart_toStartOf="@id/guideline2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/text" />
-
-        <Button
-            android:id="@+id/sports"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="236dp"
-            android:background="@drawable/round_btn"
-            android:textColor="@color/white"
-            android:text="@string/sports"
-            app:layout_constraintEnd_toEndOf="@id/guideline2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/text" />
-
-        <Button
-            android:id="@+id/technology"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="236dp"
-            android:background="@drawable/round_btn"
-            android:text="@string/technology"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="@id/guideline2"
-            app:layout_constraintTop_toTopOf="@id/text" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_headline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent=".5"/>
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:layout_marginStart="4dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text"
+            app:layout_constraintVertical_bias="1.0">
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:contentDescription="@string/business"
+                android:src="@drawable/ic_baseline_topic_24" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/topHeadline"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_btn"
+                android:text="@string/top_headlines"
+                android:textColor="#ffffff"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text"
+                tools:ignore="TextContrastCheck" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_business"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintTop_toTopOf="@id/text"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="101dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="@string/business"
+                android:src="@drawable/ic_baseline_business_24" />
+
+            <Button
+                android:id="@+id/business"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="116dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_btn"
+                android:text="@string/business"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintTop_toTopOf="@id/text"
+                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_entertainment"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintTop_toTopOf="@id/card_view_headline"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp">
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="@string/business"
+                android:src="@drawable/ic_baseline_movie_filter_24" />
+
+            <Button
+                android:id="@+id/entertainment"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="110dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_btn"
+                android:text="@string/entertainment"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/card_view_headline"
+                tools:ignore="TextContrastCheck" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_general"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintTop_toTopOf="@id/card_view_business"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp">
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:contentDescription="@string/business"
+                android:src="@drawable/ic_baseline_general_24" />
+
+            <Button
+                android:id="@+id/general"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="110dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_btn"
+                android:text="@string/general"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.509"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintTop_toTopOf="@id/card_view_business"
+                tools:ignore="TextContrastCheck" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_science"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="@id/card_view_science">
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="@string/business"
+                android:src="@drawable/ic_baseline_science_24" />
+
+            <Button
+                android:id="@+id/science"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/round_btn"
+                android:text="@string/science"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintTop_toTopOf="@id/text" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_sports"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintTop_toTopOf="@id/card_view_headline"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp">
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:contentDescription="@string/business"
+                android:src="@drawable/ic_baseline_sports_cricket_24" />
+
+            <Button
+                android:id="@+id/sports"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/round_btn"
+                android:text="@string/sports"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_technology"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="@id/card_view_business">
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="@string/business"
+                android:src="@drawable/ic_baseline_computer_24" />
+
+            <Button
+                android:id="@+id/technology"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/round_btn"
+                android:text="@string/technology"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintTop_toTopOf="@id/text" />
+        </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_health"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="10dp">
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="15dp"
+                    android:contentDescription="@string/business"
+                    android:src="@drawable/ic_baseline_healing_24" />
+
+                <Button
+                    android:id="@+id/health"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="110dp"
+                    android:background="@drawable/round_btn"
+                    android:text="@string/health"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintEnd_toEndOf="@id/guideline2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/text" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".5" />
+
+        </LinearLayout>
 </ScrollView>
